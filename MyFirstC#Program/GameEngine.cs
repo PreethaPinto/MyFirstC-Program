@@ -85,7 +85,6 @@ namespace MyFirstC_Program
         internal void SubtractionGame(string message)
         {
 
-
             var random = new Random();
             var score = 0;
 
@@ -123,7 +122,6 @@ namespace MyFirstC_Program
 
             Helpers.AddToHistory(score, "Subtraction");
         }
-
 
         internal void AdditionGame(string message)
         {
