@@ -1,4 +1,6 @@
 ﻿
+using MyFirstC_Program.Models;
+
 namespace MyFirstC_Program
 {
     internal class GameEngine
@@ -18,6 +20,8 @@ namespace MyFirstC_Program
                 Console.WriteLine($"{firstNumber} / {secondNumber}");
                 var result = Console.ReadLine();
 
+                result = Helpers.ValidateResult(result);
+
                 if (int.Parse(result) == firstNumber / secondNumber)
                 {
                     Console.WriteLine("Your answer is correct. Type any key for the next question.");
@@ -35,7 +39,7 @@ namespace MyFirstC_Program
                     "Game over");
             }
 
-            Helpers.AddToHistory(score, "Division");
+            Helpers.AddToHistory(score, GameType.Division);
         }
 
         internal void MultiplicationGame(string message)
@@ -59,6 +63,8 @@ namespace MyFirstC_Program
                 Console.WriteLine($"{firstNumber} * {secondNumber}");
                 var result = Console.ReadLine();
 
+                result = Helpers.ValidateResult(result);
+
                 if (int.Parse(result) == firstNumber * secondNumber)
                 {
                     Console.WriteLine("Your answer is correct. Type any key for the next question.");
@@ -79,7 +85,7 @@ namespace MyFirstC_Program
 
             }
 
-            Helpers.AddToHistory(score, "Multiplication");
+            Helpers.AddToHistory(score, GameType.Multiplication);
         }
 
         internal void SubtractionGame(string message)
@@ -102,6 +108,8 @@ namespace MyFirstC_Program
                 Console.WriteLine($"{firstNumber} - {secondNumber}");
                 var result = Console.ReadLine();
 
+                result = Helpers.ValidateResult(result);
+
                 if (int.Parse(result) == firstNumber - secondNumber)
                 {
                     Console.WriteLine("Your answer is correct. Type any key for the next question.");
@@ -120,7 +128,7 @@ namespace MyFirstC_Program
                     "Game over");
             }
 
-            Helpers.AddToHistory(score, "Subtraction");
+            Helpers.AddToHistory(score, GameType.Subtraction);
         }
 
         internal void AdditionGame(string message)
@@ -145,6 +153,8 @@ namespace MyFirstC_Program
                 Console.WriteLine($"{firstNumber} + {secondNumber}");
                 var result = Console.ReadLine();
 
+                result = Helpers.ValidateResult(result);
+
                 if (int.Parse(result) == firstNumber + secondNumber)
                 {
                     Console.WriteLine("Your answer is correct. Type any key for the next question.");
@@ -166,7 +176,7 @@ namespace MyFirstC_Program
                 }
             }
 
-            Helpers.AddToHistory(score, "Addition");
+            Helpers.AddToHistory(score, GameType.Addition);
 
         }
     }
